@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class StoreValoracionRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreValoracionRequest extends FormRequest
      */
     public function authorize(): bool {
         $compraventa = $this->route('compraventa');
-        return auth()->id() == $compraventa->id_comprador || auth()->id() == $compraventa->id_vendedor;
+        return Auth::id() == $compraventa->id_comprador || Auth::id() == $compraventa->id_vendedor;
     }
 
     /**
