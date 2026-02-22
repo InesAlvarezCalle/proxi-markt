@@ -49,6 +49,7 @@ class FavoritosController extends Controller
 
     }
 
+    // esta funcio torna booleano per a comprobar que existix
     public function sacarfavorito(Request $request, $id_producto)
     {
         $user = $request->user();
