@@ -4,7 +4,7 @@ backend/vendor/
 
 # Ignorar archivos de configuración sensible
 .env*
-!.env.example
+!.env*.example
 
 # Ignorar compilaciones y temporales
 frontend/dist/
@@ -16,5 +16,3 @@ repomix-output.*
 site/
 .venv/
 __pycache__/
-
-/produccion/.env
