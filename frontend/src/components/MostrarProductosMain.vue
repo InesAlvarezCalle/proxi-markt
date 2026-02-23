@@ -15,7 +15,7 @@ const props = defineProps({
 const productosAjenos = computed(() => {
     const miId = props.usuario?.id;
     if (!miId) return props.productos;
-    return props.productos.filter((producto) => producto.id_usuario !== miId);
+    return props.productos.filter((producto) => producto.id_usuario != miId);
 });
 
 const calcularKm = (latVendedor, lngVendedor) => {
